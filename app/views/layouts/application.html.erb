@@ -10,11 +10,9 @@
     <link rel="icon" href="/icon.png" type="image/png" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon.png" />
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%=
-    javascript_include_tag "application", "data-turbo-track": "reload", type:
-    "module" %>
+    <%= stylesheet_link_tag "application" %> <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous" />
   </head>
 
   <body>
@@ -28,6 +26,12 @@
         </div>
       </div>
     </header>
-    <%= yield %>
+    <% if flash.present? %>
+    <div class="flash">
+      <% flash.each do |key, value| %>
+      <div class="<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+    <% end %> <%= yield %>
   </body>
 </html>
