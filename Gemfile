@@ -59,3 +59,5 @@ end
 gem "sass-rails"
 
 gem 'faker'
+
+gem "importmap", "~> 0.1.0"
