@@ -43,6 +43,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rails"
+  gem "pry-byebug"
 end
 
 group :development do
@@ -58,6 +60,11 @@ end
 
 gem "sass-rails"
 
-gem 'faker'
+gem "faker"
+gem "haml-rails"
+gem "html2haml"
+gem "annotate"
+gem "better_errors"
+gem "binding_of_caller"
 
 gem "importmap", "~> 0.1.0"
