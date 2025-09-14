@@ -66,5 +66,6 @@ gem "html2haml"
 gem "annotate"
 gem "better_errors"
 gem "binding_of_caller"
+gem "devise"
 
 gem "importmap", "~> 0.1.0"
