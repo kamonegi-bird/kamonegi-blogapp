@@ -5,6 +5,7 @@
     %div
       %p kamonegi
       %p 2025/08/30
+  - if user_signed_in?
     .article_detail_actions
       .dropdown
         = image_tag 'actions.svg', class: 'dropbtn'
